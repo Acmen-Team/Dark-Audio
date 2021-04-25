@@ -1,0 +1,3 @@
+[submodule "Dark-Audio/vendor/openal-soft"]
+	path = Dark-Audio/vendor/openal-soft
+	url = https://github.com/wolf-li/openal-soft
