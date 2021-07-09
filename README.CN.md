@@ -17,17 +17,17 @@ Dark's plan has two aspects: the creation of a powerful 3D audio engine, and the
 
 ## Plan
 
--Support independent use
--Support Mac, Linux, Android and iOS
--Support 2D 3D sound rendering
+- Support independent use 
+- Support Mac, Linux, Android and iOS
+- Support 2D 3D sound rendering
 
 
 ## Vision
 
 We hope to use the Dark game engine to make games, and use Dark to develop the appropriate tools needed for the game. Contains the following workflow:
 
--Use the Dark editor to design game scenes.
--Test the game in Dark, including the function of saving/loading the created game.
--Load and play the game in the sandbox.
+- Use the Dark editor to design game scenes.
+- Test the game in Dark, including the function of saving/loading the created game.
+- Load and play the game in the sandbox.
 
 We want everyone to be able to play games on all desktop platforms (Windows, Mac and Linux). After the initial iteration, we will try to "use Dark to create a game" to see the engine's operating expectations.
