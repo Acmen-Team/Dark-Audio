@@ -9,11 +9,20 @@ workspace "Dark-Audio"
         "Dist"
     }
 
+    flags
+    {
+        "MultiProcessorCompile"
+    }
+
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+group "Dependencies"
+	include "Dark-Audio/vendor/OpenAL-Soft"
+group ""
 
 -- Include directories relative to root folder(solution directory)
 IncludeDir = {}
-IncludeDir["openal-soft"] = "Dark-Audio/vendor/openal-soft/include"
+IncludeDir["OpenAL-Soft"] = "Dark-Audio/vendor/OpenAL-Soft/include"
 
 project "Dark-Audio"
     location "Dark-Audio"
@@ -28,19 +37,26 @@ project "Dark-Audio"
     files
     {
         "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp",
-        "%{prj.name}/vendor/openal-soft/include/**.h"
+        "%{prj.name}/src/**.cpp"
     }
 
     defines
     {
-        "_CRT_SECURE_NO_WARNINGS"
+        "_CRT_SECURE_NO_WARNINGS",
+        "AL_LIBTYPE_STATIC"
     }
 
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/openal-soft/include"
+        "Dark-Audio/vendor/OpenAL-Soft/include",
+		"Dark-Audio/vendor/OpenAL-Soft/src",
+		"Dark-Audio/vendor/OpenAL-Soft/src/common"
+    }
+
+    links
+    {
+        "OpenAL-Soft"
     }
 
     filter "system:windows"
