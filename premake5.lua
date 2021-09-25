@@ -23,6 +23,7 @@ group ""
 -- Include directories relative to root folder(solution directory)
 IncludeDir = {}
 IncludeDir["OpenAL-Soft"] = "Dark-Audio/vendor/OpenAL-Soft/include"
+IncludeDir["OpenAL-Soft"] = "Dark-Audio/vendor/minimp3"
 
 project "Dark-Audio"
     location "Dark-Audio"
@@ -51,7 +52,8 @@ project "Dark-Audio"
         "%{prj.name}/src",
         "Dark-Audio/vendor/OpenAL-Soft/include",
 		"Dark-Audio/vendor/OpenAL-Soft/src",
-		"Dark-Audio/vendor/OpenAL-Soft/src/common"
+		"Dark-Audio/vendor/OpenAL-Soft/src/common",
+        "Dark-Audio/vendor/minimp3"
     }
 
     links
